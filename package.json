@@ -1,0 +1,22 @@
+{
+  "name": "week-11-constructors",
+  "version": "1.0.0",
+  "description": "week 11 homework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angryjenkins/student_constructor.git"
+  },
+  "author": "m. nathaniel martin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angryjenkins/student_constructor/issues"
+  },
+  "homepage": "https://github.com/angryjenkins/student_constructor#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}
