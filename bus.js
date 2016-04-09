@@ -7,7 +7,7 @@ function Bus(studentsOnTheBus,driverName,color,gas,studentEntersBus,busChatter){
     studentsOnTheBus.push(new Student);
   },
   this.busChatter = function(){
-    for(i=0,i<studentsOnTheBus;i++){
+    for(i=0;i<studentsOnTheBus.length;i++){
       console.log(studentsOnTheBus[i].catchPhrase);
     }
   }
