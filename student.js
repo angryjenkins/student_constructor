@@ -9,7 +9,7 @@ function Student(name,gender,grade,gpa,detentions,sleepingInClass,catchPhrase){
   this.sleepingInClass = sleepingInClass,
   this.catchPhrase = catchPhrase,
   this.canStudentHaveFun = function(){
-    if(this.detentions < 10 && this.gpa > 2){
+    if(this.detentions < 10 && parseFloat(this.gpa)>2){
       console.log(this.name + " can have fun!");
     } else {
       console.log(this.name + " needs to study before having fun.");
@@ -17,18 +17,4 @@ function Student(name,gender,grade,gpa,detentions,sleepingInClass,catchPhrase){
   }
 }
 
-
-
-prompter.start();
-
-prompter.get(['name', 'gender','grade','gpa','detentions','sleepingInClass','catchPhrase'], function (err, result) {
-  //
-  // Log the results.
-  for(var key in result){
-    console.log('You entered:');
-    console.log(key + ': ' + result[key]);
-  }
-});
-
-module.exports = Student();
-  // body...
+module.exports = Student;

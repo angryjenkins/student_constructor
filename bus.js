@@ -1,20 +1,28 @@
-var prompter = require('prompt');
+var Student = require('./student');
+var fs = require('fs');
 
 function Bus(studentsOnTheBus,driverName,color,gas,studentEntersBus,busChatter){
   this.studentsOnTheBus = studentsOnTheBus,
   this.driverName = driverName,
   this.color = color,
   this.gas = gas,
-  this.studentEntersBus = function(){
-    studentsOnTheBus.push(new Student);
-  },
+  this.studentEntersBus = function(name,gender,grade,GPA,detentions,sleepingInClass,catchPhrase){
+		this.studentsOnTheBus.push(new Student(name,gender,grade,GPA,detentions,sleepingInClass,catchPhrase));
+	},
   this.busChatter = function(){
-    for(i=0;i<studentsOnTheBus.length;i++){
-      console.log(studentsOnTheBus[i].catchPhrase);
-    }
-  }
+		fs.readFile("BUS.txt", "utf-8", function(err, readResult){
+		if(err)
+			throw err;
+		else{
+			var items = readResult.split('\r\n');
+			for (var i=0; i< items.length-1; i++){
+				var itemJSON = JSON.parse(items[i].replace(/[\[\]']+/g,''));
+				if(itemJSON.detentions<10 && parseFloat(itemJSON.GPA)>2) {
+					console.log(itemJSON.name.red.bold+ " says: ".bold.magenta + itemJSON.catchPhrase.red);
+				}
+			}
+		}
+  })
 }
 
-
-
-module.exports = Bus();
+module.exports = Bus;
