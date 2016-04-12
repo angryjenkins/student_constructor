@@ -1,3 +1,5 @@
+var prompter = require('prompt');
+
 function Bus(studentsOnTheBus,driverName,color,gas,studentEntersBus,busChatter){
   this.studentsOnTheBus = studentsOnTheBus,
   this.driverName = driverName,
@@ -12,5 +14,7 @@ function Bus(studentsOnTheBus,driverName,color,gas,studentEntersBus,busChatter){
     }
   }
 }
+
+
 
 module.exports = Bus();

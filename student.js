@@ -1,3 +1,5 @@
+var prompter = require('prompt');
+
 function Student(name,gender,grade,gpa,detentions,sleepingInClass,catchPhrase){
   this.name = name,
   this.gender = gender,
@@ -14,6 +16,8 @@ function Student(name,gender,grade,gpa,detentions,sleepingInClass,catchPhrase){
     }
   }
 }
+
+
 
 prompter.start();
 
