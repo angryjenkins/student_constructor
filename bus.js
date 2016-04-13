@@ -1,5 +1,6 @@
 var Student = require('./student');
 var fs = require('fs');
+var studentsOnTheBus = [];
 
 function Bus(studentsOnTheBus,driverName,color,gas,studentEntersBus,busChatter){
   this.studentsOnTheBus = studentsOnTheBus,
@@ -11,18 +12,19 @@ function Bus(studentsOnTheBus,driverName,color,gas,studentEntersBus,busChatter){
 	},
   this.busChatter = function(){
 		fs.readFile("BUS.txt", "utf-8", function(err, readResult){
-		if(err)
-			throw err;
-		else{
+		if(err){
+      throw err;
+    }	else{
 			var items = readResult.split('\r\n');
 			for (var i=0; i< items.length-1; i++){
-				var itemJSON = JSON.parse(items[i].replace(/[\[\]']+/g,''));
-				if(itemJSON.detentions<10 && parseFloat(itemJSON.GPA)>2) {
-					console.log(itemJSON.name.red.bold+ " says: ".bold.magenta + itemJSON.catchPhrase.red);
-				}
-			}
-		}
+			  var itemJSON = JSON.parse(items[i].replace(/[\[\]']+/g,''));
+		    if(itemJSON.detentions<10 && parseFloat(itemJSON.GPA)>2) {
+			    console.log(itemJSON.name + " says: " + itemJSON.catchPhrase);
+	      }
+		  }
+	  }
   })
 }
+};
 
 module.exports = Bus;
