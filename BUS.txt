@@ -1,2 +1,5 @@
-[{"name":"jenkins","gender":"m","grade":"12","gpa":"2","detentions":"8","sleepingInClass":"1","catchPhrase":"'me so angry'"}]
-[{"name":"jenn","gender":"f","grade":"4","gpa":"4","detentions":"4","sleepingInClass":"4","catchPhrase":"'i'm a girl!'"}]
+[{"name":"jeff","gender":"m","grade":"11","gpa":"3","detentions":"2","sleepingInClass":"1","catchPhrase":"json is a bastard'"}]
+[{"name":"curtis","gender":"m","grade":"10","gpa":"2","detentions":"2","sleepingInClass":"2","catchPhrase":"let's go jets"}]
+[{"name":"odell","gender":"m","grade":"10","gpa":"2","detentions":"2","sleepingInClass":"2","catchPhrase":"let's go giants"}]
+[{"name":"matt","gender":"m","grade":"4","gpa":"4","detentions":"4","sleepingInClass":"4","catchPhrase":"i hope this shit works!"}]
+[{"name":"marlaina","gender":"f","grade":"3","gpa":"3","detentions":"3","sleepingInClass":"3","catchPhrase":"i hate you, Matthew!"}]
