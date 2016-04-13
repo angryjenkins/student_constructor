@@ -1,6 +1,7 @@
 var prompter = require('prompt');
 var bus = require('./bus');
 var student = require('./student');
+var fs = require('fs');
 
 var schoolBus = new bus();
 
@@ -12,21 +13,18 @@ newStudent.canStudentHaveFun();
 
   schoolBus.studentEntersBus(result.name,result.gender,result.grade,result.GPA,result.detentions,result.sleepingInClass,result.catchPhrase);
 
-  fs.appendFile("BUS.txt", JSON.stringify(newBus.studentsOnTheBus) + "\r\n", function(err){
-	if(err)
-	  throw err;
-    }
-  )
+  fs.appendFile("BUS.txt", JSON.stringify(schoolBus.studentsOnTheBus) + "\n");
 
   fs.readFile("BUS.txt", "utf-8", function(err, data){
-		if(err)
-			throw err;
-		else{
-		  var items = data.split('\r\n');
-		  if (items.length>=20){
-				schoolBus.busChatter();
-		  }
+    if (err){
+      throw err;
+    } else {
+      var items = JSON.parse(data.split('\n'));
+     if (items.length>=2){
+       schoolBus.busChatter();
+    }
+
 	  }
-   }
+  }
  )
 });

@@ -1,0 +1,2 @@
+[{"name":"jenkins","gender":"m","grade":"12","gpa":"2","detentions":"8","sleepingInClass":"1","catchPhrase":"'me so angry'"}]
+[{"name":"jenn","gender":"f","grade":"4","gpa":"4","detentions":"4","sleepingInClass":"4","catchPhrase":"'i'm a girl!'"}]
